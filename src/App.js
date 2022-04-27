@@ -1,12 +1,12 @@
 import './App.css';
 import React, { useState } from 'react';
 import VehicleList from './VehicleList';
-// import TrafficLight from './TrafficLight';
+import TrafficLight from './TrafficLight';
 
 function App() {
   // track the following state with a few useState hooks:
   // lightColor should be a string that starts out as 'red'
-  // const [lightColor, setLightColor] = useState('red');
+  const [lightColor, setLightColor] = useState('red');
   // lizardSize should be a number that starts out as 10
   const [lizardSize, setLizardSize] = useState(10);
   // alienSize should be a number that starts out as 10
@@ -55,7 +55,7 @@ function App() {
           </div>
         </div>
       </div>
-      {/* <TrafficLight color={lightColor} /> */}
+      <TrafficLight color={lightColor} />
       <div className="buttons">
         {/* when you click this button, the color of the light in state should be set to 'red' */}
         <button>Red</button>
