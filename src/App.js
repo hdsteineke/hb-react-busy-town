@@ -12,7 +12,7 @@ function App() {
   // alienSize should be a number that starts out as 10
   const [alienSize, setAlienSize] = useState(10);
   // traffic is complicated. It should be an array of strings that starts out as ['car', 'truck']
-  const [vehicleType, setVehicles] = useState(['car', 'truck', 'bus', 'motorcycle']);
+  const [traffic, setVehicles] = useState(['car', 'truck', 'bus', 'motorcycle']);
 
   const ATTACK_MODIFIER = 1;
 
@@ -33,27 +33,27 @@ function App() {
   }
 
   function handleAddCar() {
-    vehicleType.push('car');
+    traffic.push('car');
 
-    setVehicles([...vehicleType]);
+    setVehicles([...traffic]);
   }
 
   function handleAddTruck() {
-    vehicleType.push('truck');
+    traffic.push('truck');
 
-    setVehicles([...vehicleType]);
+    setVehicles([...traffic]);
   }
 
   function handleAddBus() {
-    vehicleType.push('bus');
+    traffic.push('bus');
 
-    setVehicles([...vehicleType]);
+    setVehicles([...traffic]);
   }
   
   function handleAddMotorcycle() {
-    vehicleType.push('motorcycle');
+    traffic.push('motorcycle');
 
-    setVehicles([...vehicleType]);
+    setVehicles([...traffic]);
   }
 
   return (
@@ -94,7 +94,7 @@ function App() {
       This prop should be an array of strings like ['car', 'truck', 'truck', 'car', 'bus'].
       Do you have something like that in state that you could pass as a vehicles prop? 
       */}
-      <VehicleList vehicles={vehicleType}/>
+      <VehicleList vehicles={traffic}/>
       <div className='buttons'>
         {/* This part is weird */}
         {/* On click, you should set the traffic in state to be a copy of the same array that's already in state, but immutably add a 'car' to the end */}
